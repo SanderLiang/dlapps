@@ -8,8 +8,8 @@ import os
 import torch
 from importlib import import_module
 from datetime import datetime
-# import camera driver
 port = int(os.environ.get('PORT', 5000))
+# import camera driver
 if os.environ.get('CAMERA'):
     Camera = import_module('camera_' + os.environ['CAMERA']).Camera
 else:
@@ -57,4 +57,4 @@ def video_feed():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=port, debug=True)
+    app.run(host='0.0.0.0', port=port)
