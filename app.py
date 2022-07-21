@@ -9,6 +9,7 @@ import torch
 from importlib import import_module
 from datetime import datetime
 # import camera driver
+port = int(os.environ.get('PORT', 5000))
 if os.environ.get('CAMERA'):
     Camera = import_module('camera_' + os.environ['CAMERA']).Camera
 else:
